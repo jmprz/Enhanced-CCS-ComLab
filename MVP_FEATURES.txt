@@ -1,0 +1,7 @@
+[ Student PC ]
+   ↓ Python Agent
+[ FastAPI Backend ]
+   ↓
+[ PostgreSQL Database ]
+   ↓
+[ Web Dashboard (React) ]
