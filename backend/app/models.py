@@ -1,13 +1,15 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text
 from sqlalchemy.orm import relationship
-from database import Base
+from . import models, schemas
+from .database import engine, get_db
+from . database import Base
 import datetime
 
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     student_id = Column(String, unique=True, index=True) # e.g., 2021-0001
-    name = Column(String)
+    full_name = Column(String)
     role = Column(String)  # Admin, Teacher, Student
     password_hash = Column(String)
 
